@@ -2,10 +2,10 @@ import webbrowser
 
 # Dicionário com nomes das músicas e seus respectivos links de cifra
 musicas = {
-    "Milhoes de anos - Theo Rubia": "https://www.cifraclub.com.br/musica1/",
-    "Música 2": "https://www.cifraclub.com.br/musica2/",
-    "Música 3": "https://www.cifraclub.com.br/musica3/",
-    "Música 4": "https://www.cifraclub.com.br/musica4/"
+    "Até que o Senhor venha - Ministério Zoe": "https://www.cifraclub.com.br/ministerio-zoe/ate-que-o-senhor-venha/",
+    "Milhão de anos - Theo Rubia": "https://www.cifraclub.com.br/theo-rubia/um-milhao-de-anos/",
+    "Estamos de pé - Marcus Salles": "https://www.cifraclub.com.br/marcus-salles/estamos-de-pe/",
+    "Tu és - FHOP": "https://www.cifraclub.com.br/florianopolis-house-of-prayer/tu-es-aguas-purificadoras/"
 }
 
 def mostrar_menu(musicas):
