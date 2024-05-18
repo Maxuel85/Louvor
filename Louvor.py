@@ -32,19 +32,23 @@ def escolher_musica(musicas):
             escolha = int(input("\nEscolha uma música pelo número: "))
             if 1 <= escolha <= len(musicas):
                 nome_musica = list(musicas.keys())[escolha - 1]
-                opcoes_link = musicas.pop(nome_musica)
-                print("\nEscolha o link para abrir:")
-                print("1. Cifra Club")
-                print("2. YouTube")
-                escolha_link = int(input("Digite o número da opção desejada: "))
-                if escolha_link == 1:
-                    webbrowser.open(opcoes_link["cifra"])
-                    print(f"\nVocê escolheu: {nome_musica} - Cifra Club. O link foi aberto no navegador.\n")
-                elif escolha_link == 2:
-                    webbrowser.open(opcoes_link["youtube"])
-                    print(f"\nVocê escolheu: {nome_musica} - YouTube. O link foi aberto no navegador.\n")
-                else:
-                    print("Escolha inválida. Tente novamente.")
+                opcoes_link = musicas[nome_musica]
+                while True:
+                    print("\nEscolha o link para abrir:")
+                    print("1. Cifra Club")
+                    print("2. YouTube")
+                    print("3. Voltar")
+                    escolha_link = int(input("Digite o número da opção desejada: "))
+                    if escolha_link == 1:
+                        webbrowser.open(opcoes_link["cifra"])
+                        print(f"\nVocê escolheu: {nome_musica} - Cifra Club. O link foi aberto no navegador.\n")
+                    elif escolha_link == 2:
+                        webbrowser.open(opcoes_link["youtube"])
+                        print(f"\nVocê escolheu: {nome_musica} - YouTube. O link foi aberto no navegador.\n")
+                    elif escolha_link == 3:
+                        break
+                    else:
+                        print("Escolha inválida. Tente novamente.")
                 break
             else:
                 print("Escolha inválida. Tente novamente.")
