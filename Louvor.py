@@ -1,11 +1,23 @@
 import webbrowser
 
-# Dicionário com nomes das músicas e seus respectivos links de cifra
+# Dicionário com nomes das músicas e seus respectivos links de cifra e YouTube
 musicas = {
-    "Até que o Senhor venha - Ministério Zoe": "https://www.cifraclub.com.br/ministerio-zoe/ate-que-o-senhor-venha/",
-    "Milhão de anos - Theo Rubia": "https://www.cifraclub.com.br/theo-rubia/um-milhao-de-anos/",
-    "Estamos de pé - Marcus Salles": "https://www.cifraclub.com.br/marcus-salles/estamos-de-pe/",
-    "Tu és - FHOP": "https://www.cifraclub.com.br/florianopolis-house-of-prayer/tu-es-aguas-purificadoras/"
+    "Até que o Senhor venha - Ministério Zoe": {
+        "cifra": "https://www.cifraclub.com.br/ministerio-zoe/ate-que-o-senhor-venha/",
+        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_1"
+    },
+    "Milhão de anos - Theo Rubia": {
+        "cifra": "https://www.cifraclub.com.br/theo-rubia/um-milhao-de-anos/",
+        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_2"
+    },
+    "Estamos de pé - Marcus Salles": {
+        "cifra": "https://www.cifraclub.com.br/marcus-salles/estamos-de-pe/",
+        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_3"
+    },
+    "Tu és - FHOP": {
+        "cifra": "https://www.cifraclub.com.br/florianopolis-house-of-prayer/tu-es-aguas-purificadoras/",
+        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_4"
+    }
 }
 
 def mostrar_menu(musicas):
@@ -20,9 +32,19 @@ def escolher_musica(musicas):
             escolha = int(input("\nEscolha uma música pelo número: "))
             if 1 <= escolha <= len(musicas):
                 nome_musica = list(musicas.keys())[escolha - 1]
-                link_musica = musicas.pop(nome_musica)
-                webbrowser.open(link_musica)
-                print(f"\nVocê escolheu: {nome_musica}. O link foi aberto no navegador.\n")
+                opcoes_link = musicas.pop(nome_musica)
+                print("\nEscolha o link para abrir:")
+                print("1. Cifra Club")
+                print("2. YouTube")
+                escolha_link = int(input("Digite o número da opção desejada: "))
+                if escolha_link == 1:
+                    webbrowser.open(opcoes_link["cifra"])
+                    print(f"\nVocê escolheu: {nome_musica} - Cifra Club. O link foi aberto no navegador.\n")
+                elif escolha_link == 2:
+                    webbrowser.open(opcoes_link["youtube"])
+                    print(f"\nVocê escolheu: {nome_musica} - YouTube. O link foi aberto no navegador.\n")
+                else:
+                    print("Escolha inválida. Tente novamente.")
                 break
             else:
                 print("Escolha inválida. Tente novamente.")
