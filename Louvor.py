@@ -4,19 +4,19 @@ import webbrowser
 musicas = {
     "Até que o Senhor venha - Ministério Zoe": {
         "cifra": "https://www.cifraclub.com.br/ministerio-zoe/ate-que-o-senhor-venha/",
-        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_1"
+        "youtube": "https://www.youtube.com/watch?v=TdMS20oszR4"
     },
     "Milhão de anos - Theo Rubia": {
         "cifra": "https://www.cifraclub.com.br/theo-rubia/um-milhao-de-anos/",
-        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_2"
+        "youtube": "https://www.youtube.com/watch?v=5frMRXUeHPU"
     },
     "Estamos de pé - Marcus Salles": {
         "cifra": "https://www.cifraclub.com.br/marcus-salles/estamos-de-pe/",
-        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_3"
+        "youtube": "https://www.youtube.com/watch?v=4x-yrCz1D9g"
     },
     "Tu és - FHOP": {
         "cifra": "https://www.cifraclub.com.br/florianopolis-house-of-prayer/tu-es-aguas-purificadoras/",
-        "youtube": "https://www.youtube.com/watch?v=YOUTUBE_LINK_4"
+        "youtube": "https://www.youtube.com/watch?v=YXnQ02HYB1w"
     }
 }
 
